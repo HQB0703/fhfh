@@ -1,138 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>M có bị Gay ko</title>
-    <style>
-        .hehe{
-  text-align: center;
-  font-size: 50px;
-  font-family: 'Playpen Sans', cursive;
-  margin: 2vw;
-  animation: changeColor 6s linear infinite;
-  
-}
-@keyframes changeColor {
-  0% { color: red; }
-  25% { color: blue; }
-  50% { color: green; }
-  75% { color: orange; }
-  100% { color: purple; }
-}
-
-.button-container {
-  text-align: center;
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 41.5%;
-  transform: translate(-50%, -50%);
-}
-
-button {
-  padding: 3vw 4vw;
-  font-size: 35px;
-  margin: 10px;
-  font-family: 'Asap', sans-serif;
-  outline: none;
-  border: none;
-  background: none; 
-  color: #fff;  
-}
-
-#yes-container {
-  
-  background-color: #4CAF50; 
-  border-radius: 20px; 
-}
-
-#no-container {
-  
-  background-color: #4CAF50; 
-  border-radius: 20px;
-  margin-left: 18.5%;
-}
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-.background {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  overflow: hidden;
-}
-.p{
-    font-size: 35px;
-}
-.spark {
-  position: absolute;
-  width: 18vw;
-  height: 18vw;
-  background-color: #fff;
-  border-radius: 50%;
-  filter: blur(20px);
-}
-
-#countdown {
-  font-size: 16px;
-  margin-top: 10px;
-}
-.popup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-/* Thêm kiểu cho liên kết */
-#link {
-  display: none;
-  margin-top: 10px;
-  text-decoration: none;
-  color: #007bff;
-}
-    </style>
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="box.jpg">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <title>Lì xì nè=))</title>
+    <meta property="og:title" content="Vào Nhận Lì Xì Ngay!" />
+    <meta property="og:description" content="Hoặc có thể lì xì cho tôi" />
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Asap:wght@600&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Asap:wght@600&family=Dancing+Script&family=Playpen+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="driver.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css"/>
 </head>
 <body>
-    <div>
-        <h1 class="hehe">M có bị Gay ko</h1>
+    <!-- Header -->
+    <div class="header"id="head">
+        <h1>LÌ XÌ TẾT</h1>
     </div>
-    <div class="background">
-        <div class="spark" id="spark1"></div>
-        <div class="spark" id="spark2"></div>
-        <div class="spark" id="spark3"></div>
-        <div class="spark" id="spark1"></div>
-        <div class="spark" id="spark2"></div>
-          
-</div>
-<div id="yes-container" class="button-container">
-    <button id="yes-button" onclick="showPopup()">Có</button>
-</div>
-<div id="no-container" class="button-container">
-    <button id="no-button" onclick="moveNoButton()">Hông</button>
-  </div>
-<div id="popup" class="popup">
-    <p>YEAHH!</p>
-    <p>Đợi<span id="countdown">5</span> giây</p>
-    <a id="link" href="https://example.com">Mở liên kết</a>
-</div>
-    <script src="./script.js"></script>
+
+    <div class="animated-box" id="box"></div>
+    <div class="animated-box duplicate" id="box2"></div>
+
+    <!-- Button -->
+    <div class="button">
+        <button class="yes"onclick="ramdom()">Nhận lì xì</button>
+        <button class="no" onclick="showPopup()">Lì xì cho t</button>
+    </div>
+    <div class="bg-ani"></div>
+    <div class="mess" onclick="openMess()"></div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <span class="popup-close" onclick="hidePopup()">X</span>
+
+        <a href="https://me.momo.vn/qr/ha-quoc-bi-Mqxk92vldo" target="_blank">
+            <img class="qr" src="qr.jpg" alt="QR Code" style="width: 80%; height:80%;">
+        </a>
+
+        <svg class="download-button" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" onclick="downloadQR()">
+            <path stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/>
+        </svg>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
